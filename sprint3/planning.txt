@@ -1,0 +1,65 @@
+RCOMP 2023-2024 Project - Sprint 3 planning
+===========================================
+### Sprint master: 1201958 ###
+(This file is to be created/edited by the sprint master only)
+# 1. Sprint's backlog #
+
+| Task  | Task description                                                                                                                                                                                                                            |
+|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| T.3.1 | Update the campus.pkt layer three Packet Tracer simulation from the previous sprint, to include the described features in this sprint for building 1.                                                                                       |
+| T.3.2 | Update the campus.pkt layer three Packet Tracer simulation from the previous sprint, to include the described features in this sprint for building 2. Final integration of each member’s Packet Tracer simulation into a single simulation. |
+
+
+# 2. Technical decisions and coordination #
+In this section, all technical decisions taken in the planning meeting should be mentioned. 		Most importantly, all technical decisions impacting on the subtasks implementation must be settled on this 		meeting and specified here.
+
+| OSPF       | Area ID | Network Address | Wildcard  |
+|------------|---------|-----------------|-----------|
+| Backbone   | 0       | 172.26.132.0/22 | 0.0.3.255 |
+| Building-1 | 1       | 172.26.136.0/22 | 0.0.3.255 |
+| Building-2 | 2       | 172.26.140.0/22 | 0.0.3.255 |
+
+
+| DNS        | Domain Name                  | Server IPv4 address | DNS Name Server                 |
+|------------|------------------------------|---------------------|---------------------------------|
+| Building-1 | rcomp-23-24-na-g5            | 172.26.137.10       | ns.rcomp-23-24-na-g5            |
+| Building-2 | building-2.rcomp-23-24-na-g5 | 172.26.142.10       | ns.building-2.rcomp-23-24-na-g5 |
+
+
+
+| VoIP       | Prefix | Phone Number Range | IP Source-address |
+|------------|--------|--------------------|-------------------|
+| Building-1 | 1      | 100-199            | 172.26.137.129    |
+| Building-2 | 2      | 200-299            | 172.26.142.1      |
+
+
+# 3. Subtasks assignment #
+(For each team member (sprint master included), the description of the assigned subtask in sprint 3)
+
+Each task has a code, for example, 3.2.1 means it is a task regarding Sprint 3 for Building 2 and its the task 1.
+
+### 1201958 ###
+| Task  | Description                                                                          |
+|-------|--------------------------------------------------------------------------------------|
+| 3.1.1 | Replace static routing with OSPF based dynamic routing                               |
+| 3.1.2 | Http service                                                                         |
+| 3.1.3 | DHCPv4 service                                                                       |
+| 3.1.4 | VoIP service                                                                         |
+| 3.1.5 | Configuring DNS servers to establish a DNS domains tree                              |
+| 3.1.6 | Enforcing NAT (Network Address Translation)                                          |
+| 3.1.7 | Establishing traffic access policies on routers (static firewall)                    |
+| 3.1.8 | Final integration of each member’s Packet Tracer simulation into a single simulation |
+
+### 1200657 ###
+| Task  | Description                                                                          |
+|-------|--------------------------------------------------------------------------------------|
+| 3.2.1 | Replace static routing with OSPF based dynamic routing                               |
+| 3.2.2 | Http service                                                                         |
+| 3.2.3 | DHCPv4 service                                                                       |
+| 3.2.4 | VoIP service                                                                         |
+| 3.2.5 | Configuring DNS servers to establish a DNS domains tree                              |
+| 3.2.6 | Enforcing NAT (Network Address Translation)                                          |
+| 3.2.7 | Establishing traffic access policies on routers (static firewall)                    |
+
+
+

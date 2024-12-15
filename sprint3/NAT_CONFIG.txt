@@ -1,0 +1,6 @@
+ip nat inside source static tcp 172.26.137.10 80 172.26.132.2 80
+ip nat inside source static tcp 172.26.137.10 443 172.26.132.2 443
+
+
+ip nat inside source static tcp 172.26.142.10 80 172.26.132.3 80
+ip nat inside source static tcp 172.26.142.10 443 172.26.132.3 443

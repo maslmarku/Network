@@ -1,0 +1,137 @@
+Current configuration : 2397 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname IC104
+!
+!
+!
+!
+ip dhcp excluded-address 172.18.194.1
+ip dhcp excluded-address 172.18.194.129
+ip dhcp excluded-address 172.18.195.1
+ip dhcp excluded-address 172.18.195.129
+ip dhcp excluded-address 172.18.195.193
+ip dhcp excluded-address 172.26.137.10 172.26.137.20
+!
+ip dhcp pool VLAN431
+ network 172.26.136.0 255.255.255.192
+ default-router 172.26.136.1
+ dns-server 172.26.137.10
+ip dhcp pool VLAN432
+ network 172.26.136.64 255.255.255.192
+ default-router 172.26.136.65
+ dns-server 172.26.137.10
+ip dhcp pool VLAN433
+ network 172.26.136.128 255.255.255.128
+ default-router 172.26.136.129
+ dns-server 172.26.137.10
+ip dhcp pool VLAN434
+ network 172.26.137.0 255.255.255.128
+ default-router 172.26.137.1
+ dns-server 172.26.137.10
+ip dhcp pool VLAN435
+ network 172.26.137.128 255.255.255.192
+ default-router 172.26.137.129
+ dns-server 172.26.137.10
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2811/K9 sn FTX1017Q32N-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 172.26.132.2 255.255.255.240
+ ip ospf 1 area 0
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0.431
+ encapsulation dot1Q 431
+ ip address 172.26.136.1 255.255.255.192
+!
+interface FastEthernet0/0.432
+ encapsulation dot1Q 432
+ ip address 172.26.136.65 255.255.255.192
+!
+interface FastEthernet0/0.433
+ encapsulation dot1Q 433
+ ip address 172.26.136.129 255.255.255.128
+!
+interface FastEthernet0/0.434
+ encapsulation dot1Q 434
+ ip address 172.26.137.1 255.255.255.128
+ ip nat inside
+!
+interface FastEthernet0/0.435
+ encapsulation dot1Q 435
+ ip address 172.26.137.129 255.255.255.128
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 1
+ log-adjacency-changes
+ network 172.26.136.0 0.0.0.63 area 1
+ network 172.26.136.64 0.0.0.63 area 1
+ network 172.26.136.128 0.0.0.127 area 1
+ network 172.26.137.0 0.0.0.127 area 1
+ network 172.26.137.128 0.0.0.63 area 1
+!
+router rip
+!
+ip nat inside source static tcp 172.26.137.10 80 172.26.142.10 80 
+ip nat inside source static tcp 172.26.137.10 80 172.26.142.10 443 
+ip classless
+ip route 0.0.0.0 0.0.0.0 172.26.132.1 
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end

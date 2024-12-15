@@ -1,0 +1,25 @@
+IC2011(config)#service dhcp
+IC2011(config)#ip dhcp pool VLAN440
+IC2011(dhcp-config)#net
+IC2011(dhcp-config)#network 172.26.142.64 255.255.255.128
+IC2011(dhcp-config)#de
+IC2011(dhcp-config)#default-router 172.26.142.100
+IC2011(dhcp-config)#op
+IC2011(dhcp-config)#option 150 ip 172.26.142.100
+IC2011(dhcp-config)#ds
+IC2011(dhcp-config)#dsdn
+IC2011(dhcp-config)#dns-server 172.26.142.10
+IC2011(dhcp-config)#exedo wr
+IC2011(dhcp-config)#ex
+IC2011(config)#do wr
+Building configuration...
+[OK]
+IC2011(config)#tele
+IC2011(config)#telephony-service 
+IC2011(config-telephony)#max-dn 2
+IC2011(config-telephony)#mac-ep
+IC2011(config-telephony)#max-ep
+IC2011(config-telephony)#max-ephones 2
+IC2011(config-telephony)#ip
+IC2011(config-telephony)#ip s
+IC2011(config-telephony)#ip source-address 172.26.142.100 port 2000

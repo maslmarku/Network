@@ -1,0 +1,24 @@
+#B2
+IC2011#sh access-list
+Extended IP access list 100
+    10 deny ip 172.26.140.0 0.0.0.127 any
+    20 deny ip 172.26.140.128 0.0.0.127 any
+    30 deny ip 172.26.141.0 0.0.0.127 any
+    40 deny ip 172.26.142.0 0.0.0.255 any
+    50 deny ip 172.26.142.0 0.0.0.127 any
+    60 permit ip any any (16 match(es))
+Extended IP access list 101
+    10 permit icmp any any echo
+    20 permit icmp any any echo-reply
+    30 deny icmp any any
+Extended IP access list 102
+    10 permit tcp any 172.26.140.0 0.0.0.255 eq domain
+    20 permit tcp any 172.26.140.0 0.0.0.255 eq www
+    30 permit tcp any 172.26.140.0 0.0.0.255 eq 443
+    40 permit ip any 172.26.140.0 0.0.0.255
+    50 deny ip any 172.26.140.0 0.0.0.255
+    60 permit ip 172.26.140.0 0.0.0.255 any
+Extended IP access list 103
+    10 permit tcp any host 172.26.132.3 eq 22
+    20 permit icmp any host 172.26.132.3 echo
+    30 permit icmp any host 172.26.132.3 echo-reply

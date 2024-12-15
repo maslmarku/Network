@@ -1,0 +1,161 @@
+Current configuration : 2872 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname IC2011
+!
+!
+!
+!
+ip dhcp excluded-address 172.18.196.1
+ip dhcp excluded-address 172.18.196.129
+ip dhcp excluded-address 172.18.196.193
+ip dhcp excluded-address 172.18.196.225
+ip dhcp excluded-address 172.18.196.241
+ip dhcp excluded-address 172.26.142.10
+ip dhcp excluded-address 172.26.142.20
+!
+ip dhcp pool VLAN436
+ network 172.26.140.0 255.255.255.128
+ default-router 172.26.140.1
+ dns-server 172.26.142.10
+ip dhcp pool VLAN437
+ network 172.26.140.128 255.255.255.128
+ default-router 172.26.140.129
+ dns-server 172.26.142.10
+ip dhcp pool VLAN438
+ network 172.26.141.0 255.255.255.0
+ default-router 172.26.141.1
+ dns-server 172.26.142.10
+ip dhcp pool VLAN439
+ network 172.26.142.0 255.255.255.192
+ default-router 172.26.142.1
+ dns-server 172.26.142.10
+ip dhcp pool VLAN440
+ network 172.26.142.0 255.255.255.128
+ default-router 172.26.142.65
+ dns-server 172.26.142.10
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2811/K9 sn FTX1017S3MT-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 172.26.132.3 255.255.255.240
+ ip ospf 1 area 0
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0.1
+ encapsulation dot1Q 511
+ ip address 172.18.196.1 255.255.255.128
+!
+interface FastEthernet0/0.2
+ encapsulation dot1Q 512
+ ip address 172.18.196.129 255.255.255.192
+!
+interface FastEthernet0/0.3
+ encapsulation dot1Q 513
+ ip address 172.18.196.193 255.255.255.224
+!
+interface FastEthernet0/0.4
+ encapsulation dot1Q 514
+ ip address 172.18.196.225 255.255.255.240
+!
+interface FastEthernet0/0.5
+ encapsulation dot1Q 515
+ ip address 172.18.196.241 255.255.255.240
+!
+interface FastEthernet0/0.6
+ encapsulation dot1Q 502
+ ip address 172.18.193.34 255.255.255.224
+!
+interface FastEthernet0/0.436
+ encapsulation dot1Q 436
+ ip address 172.26.140.1 255.255.255.128
+!
+interface FastEthernet0/0.437
+ encapsulation dot1Q 437
+ ip address 172.26.140.129 255.255.255.128
+!
+interface FastEthernet0/0.438
+ encapsulation dot1Q 438
+ ip address 172.26.141.1 255.255.255.0
+!
+interface FastEthernet0/0.439
+ encapsulation dot1Q 439
+ ip address 172.26.142.1 255.255.255.192
+!
+interface FastEthernet0/0.440
+ encapsulation dot1Q 440
+ ip address 172.26.142.100 255.255.255.224
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 1
+ log-adjacency-changes
+ network 172.26.140.0 0.0.0.127 area 2
+ network 172.26.140.128 0.0.0.127 area 2
+ network 172.26.141.0 0.0.0.255 area 2
+ network 172.26.142.0 0.0.0.63 area 2
+ network 172.26.142.0 0.0.0.127 area 2
+!
+router rip
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 172.26.132.1 
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+telephony-service
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end

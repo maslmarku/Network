@@ -1,0 +1,48 @@
+RCOMP 2023-2024 Project - Sprint 3 review
+=========================================
+### Sprint master: 1201958 ###
+(This file is to be created/edited by the sprint master only)
+# 1. Sprint's backlog #
+
+| T.3.1 | Update the  campus.pkt layer three Packet Tracer simulation from the previous sprint, to include the described features in this sprint for building 1.                                                                                       |
+| T.3.2 | Update the campus.pkt layer three Packet Tracer simulation from the previous sprint, to include the described features in this sprint for building 2. Final integration of each member’s Packet Tracer simulation into a single simulation. |
+
+
+# 2. Subtasks assessment #
+One by one, each team member presents his/her outcomes to the team, the team assesses 		the accomplishment of the subtask backlog.
+The subtask backlog accomplishment can be assessed as one of:
+
+  * Totally implemented with no issues
+  * Totally implemented with issues
+  * Partially implemented with no issues
+  * Partially implemented with issues
+
+
+Each task has a code, for example, 3.2.1 means it is a task regarding Sprint 3 for Building 2 and its the task 1.
+
+### 1201958 ###
+| Task  | Description                                                                          |  Outcome                                                   |
+|-------|--------------------------------------------------------------------------------------|------------------------------------------------------------|
+| 3.1.1 | Replace static routing with OSPF based dynamic routing                               | Totally implemented with no issues |
+| 3.1.2 | DHCPv4 service                                                                       | Totally implemented with no issues |
+| 3.1.3 | VoIP service                                                                         | Partially implemented with issues  |
+| 3.1.4 | Adding a second server to each DMZ network to run the HTTP service                   | Totally implemented with no issues |
+| 3.1.5 | Configuring DNS servers to establish a DNS domains tree                              | Totally implemented with no issues |
+| 3.1.6 | Enforcing NAT (Network Address Translation)                                          | Totally implemented with issues    |
+| 3.1.7 | Establishing traffic access policies on routers (static firewall)                    | Totally implemented with issues    |
+| 3.1.8 | Final integration of each member’s Packet Tracer simulation into a single simulation | Totally implemented with no issues |
+
+
+
+### 1200657 ###
+| Task  | Description                                                                          |  Outcome                                                   |
+|-------|--------------------------------------------------------------------------------------|------------------------------------------------------------|
+| 3.2.1 | Replace static routing with OSPF based dynamic routing                               | Totally implemented with no issues |
+| 3.2.2 | DHCPv4 service                                                                       | Totally implemented with no issues |
+| 3.2.3 | VoIP service                                                                         | Partially implemented with issues  |
+| 3.2.4 | Adding a second server to each DMZ network to run the HTTP service                   | Totally implemented with no issues |
+| 3.2.5 | Configuring DNS servers to establish a DNS domains tree                              | Totally implemented with no issues |
+| 3.2.6 | Enforcing NAT (Network Address Translation)                                          | Totally implemented with issues    |
+| 3.2.7 | Establishing traffic access policies on routers (static firewall)                    | Totally implemented with issues    |
+| 3.2.8 | Final integration of each member’s Packet Tracer simulation into a single simulation | Totally implemented with no issues |
+                                                                                      
